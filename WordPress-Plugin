@@ -1,7 +1,7 @@
 <?php
 /*
  * Plugin Name: Redirect Website to Page Id
- * Plugin URI: https://github.com/
+ * Plugin URI: https://github.com/winfieldlittle/Redirect-WP-to-Page-ID
  * Version: 0.1
  * Description: Redirect all WordPress a page; uses template_redirect as suggested in https://wordpress.stackexchange.com/a/76807/86662
  * Author: Winfield Little
