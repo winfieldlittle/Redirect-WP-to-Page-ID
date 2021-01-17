@@ -1,0 +1,25 @@
+<?php
+/*
+ * Plugin Name: Redirect Website to Page Id
+ * Plugin URI: https://github.com/
+ * Version: 0.1
+ * Description: Redirect all WordPress a page; uses template_redirect as suggested in https://wordpress.stackexchange.com/a/76807/86662
+ * Author: Winfield Little
+ * Author URI: https://www.winfieldlittle.com
+ * Requires at least: 3.0.0
+ *
+ * Text Domain: wp-redirect-website-to-page
+ * Domain Path: /languages/
+ * License: GPL-3.0
+ * License URI: http://www.gnu.org/licenses/gpl-3.0.txt
+ *
+ * @author Winfield Little
+ */
+add_action( 'template_redirect', function() {
+    if ( is_page( 4 ) ) {
+        return;
+    }
+
+    wp_redirect( esc_url_raw( home_url( 'index.php?page_id=4' ) ) );
+    exit;
+} );
